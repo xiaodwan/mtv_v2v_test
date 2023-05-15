@@ -1,0 +1,26 @@
+apiVersion: forklift.konveyor.io/v1beta1
+kind: Plan
+metadata:
+  name: __MIGRATION_PLAN_NAME__
+  namespace: openshift-mtv
+spec:
+  description: ""
+  map:
+    network:
+      name: __NETWORK_MAP_NAME__
+      namespace: openshift-mtv
+    storage:
+      name: __STORAGE_MAP_NAME__
+      namespace: openshift-mtv
+  provider:
+    destination:
+      name: host
+      namespace: openshift-mtv
+    source:
+      name: __PROVIDER_NAME__
+      namespace: openshift-mtv
+  targetNamespace: __TARGET_NAMESPACE__
+  warm: false
+  vms:
+  - hooks: []
+    # VM will be appened by script

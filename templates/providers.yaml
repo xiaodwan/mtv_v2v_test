@@ -1,0 +1,13 @@
+apiVersion: forklift.konveyor.io/v1beta1
+kind: Provider
+metadata:
+  name: __PROVIDER_NAME__
+  namespace: openshift-mtv
+spec:
+  type: vsphere
+  url: https://__VMWARE_HOST__/sdk
+  settings:
+    vddkInitImage: __VDDK_INIT_IMAGE__
+  secret:
+    name: __PROVIDER_SECRET_NAME__
+    namespace: openshift-mtv
